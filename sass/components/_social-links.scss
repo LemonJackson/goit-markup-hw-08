@@ -1,0 +1,33 @@
+// SOCIAL LINKS
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        fill: var(--icon-color);
+        border-radius: 50%;
+        transition: background-color var(--primary-animation), fill var(--primary-animation);
+    
+    
+        &:hover,
+        &:focus,
+        &:active {
+            fill: var(--primary-white-color);
+            background-color: var(--acсent-color);
+        }
+    
+    
+        &--join {
+            fill: var(--primary-white-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}

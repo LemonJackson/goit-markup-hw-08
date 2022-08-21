@@ -1,0 +1,19 @@
+// IMPORT
+// button list
+@import './portfolio/filter';
+// project list
+@import './portfolio/project';
+
+
+
+// PORTFOLIO
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+

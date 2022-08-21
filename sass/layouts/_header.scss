@@ -1,0 +1,21 @@
+// IMPORT HEADER HOMPONENTS
+
+// navigation
+@import './navigation';
+// logo
+@import '../components/logo';
+// contact links
+@import '../components/contacts';
+
+
+
+// HEADER
+.header {
+    border-bottom: 1px solid #ececec;
+
+    &__container {
+        display: flex;
+        align-items: center;
+      }
+}
+

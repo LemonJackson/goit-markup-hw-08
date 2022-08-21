@@ -1,0 +1,22 @@
+// CLOSE BUTTON
+.close-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: fill var(--primary-animation);
+
+
+    &:hover,
+    &:focus,
+    &:active {
+        fill: var(--acсent-color);
+    }
+}

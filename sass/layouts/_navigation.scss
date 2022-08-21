@@ -1,0 +1,39 @@
+// NAVIGATIOM
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+
+    &__list {
+            display: flex;
+            column-gap: 50px;
+    }
+
+
+    &__link {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: var(--dark-text-color);
+
+
+        &--current {
+            position: relative;
+            color: var(--acсent-color);
+
+            &::after {
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                content: '';
+                height: 4px;
+                width: 100%;
+                background: var(--acсent-color);
+                border-radius: 2px;
+            }
+        }
+    }
+}

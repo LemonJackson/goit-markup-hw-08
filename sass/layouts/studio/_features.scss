@@ -1,0 +1,34 @@
+// FEATURES SECTION
+.features {
+    display: flex;
+    justify-content: space-between;
+
+
+    &__item {
+            width: 270px;
+    }
+
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: var(--grey-background-color);
+        border-radius: 4px;
+    }
+
+
+    &__title {
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        color: var(--dark-text-color);
+    }
+
+
+    &__text {
+        line-height: 1.71;
+    }
+}

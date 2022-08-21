@@ -1,0 +1,19 @@
+// LOGO
+.logo {
+    font-family: var(--logo-font);
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    color: var(--acсent-color);
+    text-decoration: none;
+
+
+    &__primary {
+            margin-right: 92px;
+            color: var(--black-text-color);
+    }
+
+
+    &__secondary {
+        color: var(--primary-white-color);
+    }
+}
