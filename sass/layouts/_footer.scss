@@ -1,27 +1,33 @@
-// IMPORT
-// logo
-@import '../components/logo';
-// address
-@import '../components/address';
-// join and social links
-@import '../components/join';
-@import '../components/social-links';
-// follow
-@import '../components/follow';
-
-
-
-
 // FOTER
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--dark-background-color);
+    
 
 
     &__section {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: baseline;
-        gap: 70px;
+        gap: 60px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            gap: 70px;
+        }
     }
+
+    &__address {
+        @media screen and (min-width:1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
 }

@@ -1,8 +1,9 @@
-// ADDRESS
 .address {
     margin-top: 20px;
     font-style: normal;
     line-height: calc(24 / 14);
+
+
 
 
     &__item:not(:last-child) {
@@ -11,7 +12,7 @@
 
 
     &__link {
-    color: var(--primary-white-color);
+        color: var(--primary-white-color);
 
 
         &--contact {
@@ -19,4 +20,3 @@
         }
     }
 }
-

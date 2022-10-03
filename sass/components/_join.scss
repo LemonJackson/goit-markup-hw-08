@@ -1,13 +1,17 @@
-// IMPORT
-// social links
-
-
-// JOIN
 .join {
+    
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 23px;
+    }
+
     &__text {
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--primary-white-color);
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--primary-white-color);
     }
 }

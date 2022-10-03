@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="uk">
 
+<!-- HEAD -->
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
+
+  <!-- NORMALIZE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- STYLES -->
   <link rel="stylesheet" href="./css/main.min.css" />
+
   <title>WebStudio</title>
 </head>
 
@@ -38,7 +47,7 @@
             <a class="link navigation__link" href="./index.html">Студія</a>
           </li>
           <li class="navigation__item">
-            <a class="link navigation__link navigation__link--current" href="./portfolio.html">Портфоліо</a>
+            <a class="link navigation__link  navigation__link--current" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="navigation__item">
             <a class="link navigation__link" href="">Контакти</a>
@@ -63,6 +72,77 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+
+      <!-- MOBILE MENU -->
+      <button class="btn open-menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+
+        <svg class="open-menu-btn__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-open-menu"></use>
+        </svg>
+      </button>
+
+      <div class="menu js-menu-container">
+        <div class="container menu__container">
+          <button class="btn menu__close-btn js-close-menu" type="button" data-menu-close>
+            <svg class="menu__close-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+
+          <ul class="list menu__nav">
+            <li class="">
+              <a class="link menu__page-link" href="./index.html">Студія</a>
+            </li>
+            <li class="">
+              <a class="link menu__page-link menu__page-link--current" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="">
+              <a class="link menu__page-link" href="">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="list menu__contacts">
+            <li class="">
+              <a class="link menu__phone-link" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+
+            </li>
+            <li class="">
+              <a class="link menu__mail-link" href=" mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="list menu__social">
+            <li>
+              <a class="link menu__social-link" href="https://instagram.com" target="_blank"
+                rel="nofollow noopener noreferrer">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a class="link menu__social-link" href="https://twitter.com" target="_blank"
+                rel="nofollow noopener noreferrer">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a class="link menu__social-link" href="https://facebook.com" target="_blank"
+                rel="nofollow noopener noreferrer">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a class="link menu__social-link" href="https://linkedin.com" target="_blank"
+                rel="nofollow noopener noreferrer">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -111,10 +191,28 @@
 
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project1.jpg" alt="Веб-сайт Технокряк" width="370"
-                  height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-1.jpg    1x,
+                                												./images/portfolio/portfolio_lg-1@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-1.jpg    1x,
+                                												./images/portfolio/portfolio_md-1@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-1.jpg    1x,
+                                												./images/portfolio/portfolio_sm-1@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-1.jpg" alt="Ноутбук з відкритим сайтом" width="450"
+                    height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -130,9 +228,27 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project2.jpg" alt="Дизайн Постера" width="370" height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-2.jpg    1x,
+                                												./images/portfolio/portfolio_lg-2@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-2.jpg    1x,
+                                												./images/portfolio/portfolio_md-2@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-2.jpg    1x,
+                                												./images/portfolio/portfolio_sm-2@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-2.jpg" alt="Баскетболісти" width="450" height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -148,10 +264,28 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project3.jpg" alt="Приложение Ресторана" width="370"
-                  height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-3.jpg    1x,
+                                												./images/portfolio/portfolio_lg-3@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-3.jpg    1x,
+                                												./images/portfolio/portfolio_md-3@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-3.jpg    1x,
+                                												./images/portfolio/portfolio_sm-3@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-3.jpg" alt="Логотип ресторану, з рибою" width="450"
+                    height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -167,10 +301,27 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project4.jpg" alt="Маркетинг Проекта" width="370"
-                  height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-4.jpg    1x,
+                                												./images/portfolio/portfolio_lg-4@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-4.jpg    1x,
+                                												./images/portfolio/portfolio_md-4@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-4.jpg    1x,
+                                												./images/portfolio/portfolio_sm-4@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-4.jpg" alt="Навушники" width="450" height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -186,10 +337,27 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project5.jpg" alt="Приложение для проекта Boxes" width="370"
-                  height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-5.jpg    1x,
+                                												./images/portfolio/portfolio_lg-5@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-5.jpg    1x,
+                                												./images/portfolio/portfolio_md-5@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-5.jpg    1x,
+                                												./images/portfolio/portfolio_sm-5@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-5.jpg" alt="Дві коробки" width="450" height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -205,10 +373,27 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project6.jpg" alt="Веб-сайт для Inspiration has no Borders"
-                  width="370" height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-6.jpg    1x,
+                                												./images/portfolio/portfolio_lg-6@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-6.jpg    1x,
+                                												./images/portfolio/portfolio_md-6@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-6.jpg    1x,
+                                												./images/portfolio/portfolio_sm-6@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-6.jpg" alt="Монітор" width="450" height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -224,10 +409,27 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project7.jpg" alt="Дизайн для Издания" width="370"
-                  height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-7.jpg    1x,
+                                												./images/portfolio/portfolio_lg-7@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-7.jpg    1x,
+                                												./images/portfolio/portfolio_md-7@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-7.jpg    1x,
+                                												./images/portfolio/portfolio_sm-7@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-7.jpg" alt="Відкрита книга" width="450" height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -243,10 +445,27 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project8.jpg" alt="Маркетинг для проекта LAB" width="370"
-                  height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-7.jpg    1x,
+                                												./images/portfolio/portfolio_lg-7@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-7.jpg    1x,
+                                												./images/portfolio/portfolio_md-7@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-7.jpg    1x,
+                                												./images/portfolio/portfolio_sm-7@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-7.jpg" alt="Відкрита книга" width="450" height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -262,10 +481,27 @@
           <li class="portfolio__item">
             <a class="link project" href="">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project9.jpg" alt="Приложение для Growing Business" width="370"
-                  height="294" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source media="(min-width: 1200px)" srcset="
+                                												./images/portfolio/portfolio_lg-9.jpg    1x,
+                                												./images/portfolio/portfolio_lg-9@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- tablet screen -->
+                  <source media="(min-width: 768px)" srcset="
+                                												./images/portfolio/portfolio_md-9.jpg    1x,
+                                												./images/portfolio/portfolio_md-9@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <!-- mobile screen -->
+                  <source media="(max-width: 767px)" srcset="
+                                												./images/portfolio/portfolio_sm-9.jpg    1x,
+                                												./images/portfolio/portfolio_sm-9@2x.jpg 2x
+                                											" type="image/jpg" />
+                  <img src="./images/portfolio/portfolio_sm-9.jpg" alt="Ноутбук" width="450" height="290" />
+                </picture>
                 <p class="project__description">
-                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                  Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                  це дозволить
                   відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
@@ -308,7 +544,8 @@
               <a class="link contact__link address__link--contact" href="mailto:info@example.com">info@example.com</a>
             </li>
             <li class="address__item">
-              <a class="link contact__link address__link--contact" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="link contact__link address__link--contact" href="tel:+380961111111">+38 096 111 11
+                11</a>
             </li>
           </ul>
         </address>
@@ -364,10 +601,12 @@
       <div class="follow">
         <p class="follow__text">Підпишіться на розсилку</p>
         <form class="follow__form">
-          <input class="follow__field" type="email" placeholder=" " id="follow-field">
-          <label class="follow__label" for="follow-field">
-            Email
-          </label>
+          <div class="follow__input">
+            <input class="follow__field" type="email" placeholder=" " id="follow-field">
+            <label class="follow__label" for="follow-field">
+              Email
+            </label>
+          </div>
           <button class="btn btn--primary follow__btn" type="submit">
             Підписатися
             <svg class="follow__icon" width="24" height="24">
@@ -380,7 +619,7 @@
   </footer>
 
 
-
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

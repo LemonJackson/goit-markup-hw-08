@@ -1,19 +1,39 @@
-// IMPORT
-// button list
 @import './portfolio/filter';
-// project list
-@import './portfolio/project';
-
-
+@import './portfolio/projects';
 
 // PORTFOLIO
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 
-  &__item {
-    flex-basis: calc((100% - 60px) / 3);
-  }
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+        align-items: stretch;
+
+    }
+
+
+    &__item {
+
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+
+        &:first-child .project__name {
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                padding-bottom: 56px;
+            }
+        }
+    }
+
 }
-

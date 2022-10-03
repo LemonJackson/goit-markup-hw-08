@@ -1,21 +1,120 @@
-// IMPORT HEADER HOMPONENTS
-
-// navigation
-@import './navigation';
-// logo
-@import '../components/logo';
-// contact links
-@import '../components/contacts';
-
-
-
-// HEADER
+/**
+  |============================
+  | HEADER
+  |============================
+*/
 .header {
     border-bottom: 1px solid #ececec;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     &__container {
         display: flex;
         align-items: center;
+    }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.open-menu-btn {
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
+
+    @media screen and (min-width: 768px) {
+        display: none;
       }
 }
 
+
+
+
+// NAVIGATIOM
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+
+
+  &__list {
+    display: flex;
+    column-gap: 50px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+      }
+  }
+
+
+  &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--dark-text-color);
+
+
+    &--current {
+      position: relative;
+      color: var(--acсent-color);
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        content: '';
+        height: 4px;
+        width: 100%;
+        background: var(--acсent-color);
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      fill: #757575;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    } 
+
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 1199px){
+        font-size: 12px;
+        line-height: calc(14 / 12);
+      }
+    }
+
+
+    &__icon {
+      margin-right: 8px;
+
+      @media screen and (min-width: 1200px) {
+        margin-right: 10px;
+      }
+    }
+}

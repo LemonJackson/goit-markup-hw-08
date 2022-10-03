@@ -1,24 +1,38 @@
-// UNITS
+// Base styles
+@import './base/reset';
+@import './base/common';
+
+// Utils styles
 @import './utils/variables';
 @import './utils/visually-hidden';
-// BASE
-@import './base/common';
-@import './base/reset';
-// COMPONENTS
-// modal
+
+// Components
+@import './components/logo';
+@import './components/btn';
+@import './components/social-icons';
+@import './components/address';
+@import './components/join';
+@import './components/follow';
 @import './components/modal';
-// LAYOUTS
-@import './layouts/header';
+@import './components/backdrop';
+@import './components/mobile-menu';
+
+
+
+// Layots
+
+// Header
+@import "./layouts/header";
+
+
+// Studio page
 @import './layouts/studio';
+// Portfolio Page
 @import './layouts/portfolio';
+
+
+// FOOTER
 @import './layouts/footer';
-
-
-
-
-
-
-
 
 
 
